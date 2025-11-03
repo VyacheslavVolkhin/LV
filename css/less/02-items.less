@@ -1,6 +1,35 @@
 /* ----------------------------------- *\
 			items styles
 \* ----------------------------------- */
+.item-tile-alphabet {
+	font-size: 18px;
+	line-height: 24px;
+	display: block;
+	position: relative;
+	font-weight: 500;
+	.tile-title {
+		display: block;
+		width: 64px;height: 64px;
+		border-radius: 50%;
+		background: #F0F8E4;
+		line-height: 64px;
+		text-align: center;
+		margin-bottom: 30px;
+		font-size: 30px;
+		font-weight: bold;
+	}
+	.menu {
+		li {
+			margin-bottom: 12px;
+			page-break-inside: avoid;
+			break-inside: avoid-column;
+			width: 100%;
+		}
+	}
+	a {
+		text-decoration: underline;
+	}
+}
 .item-tile-article-main {
 	border-radius: 1.6rem;
 	background: #FAFBF9;
@@ -170,7 +199,7 @@
 	position: relative;
 	height: 100%;
 	min-height: 100px;
-	background: #fff;
+	background: #FAFBF9;
 	border-radius: 12px;
 	font-size: 13px;
 	line-height: 16px;
@@ -748,7 +777,20 @@ a.elm-user {
 		}
 	}
 }
+@media (min-width: 640px) {
+	.item-tile-alphabet {
+		.menu {
+			columns: 2;
+			column-gap: 30px;
+		}
+	}
+}
 @media (min-width: 768px) {
+	.item-tile-alphabet {
+		.menu {
+			columns: 3;
+		}
+	}
 	.item-tile-question {
 		padding: 4.8rem;
 		border-radius: 16px;
@@ -834,6 +876,33 @@ a.elm-user {
 	
 }
 @media (min-width: 1024px) {
+	.item-tile-alphabet {
+		width: 100%;
+		background: #FAFBF9;
+		border-radius: 16px;
+		padding: 6rem 4rem 6rem 6rem;
+		display: flex;
+		align-items: center;
+		.tile-menu-wrap {
+			flex: 1;
+			padding-left: 15rem;
+		}
+		.tile-title {
+			width: 8rem;
+			margin: 0;
+			height: 8rem;
+			border-radius: 0;
+			background: none;
+			line-height: 8rem;
+			font-size: 4.4rem;
+			font-weight: bold;
+			flex-shrink: 0;
+		}
+		.menu {
+			columns: 3;
+			column-gap: 30px;
+		}
+	}
 	.item-tile-blog {
 		&:not(.tile-main) {
 			gap: 1.5rem;
