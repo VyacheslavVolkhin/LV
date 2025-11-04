@@ -2,7 +2,63 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	//fancybox
 	Fancybox.bind("[data-fancybox]", {
-		//settings
+		Toolbar: {
+			display: {
+			left: [],
+			middle: [],
+			right: ["close"]
+			}
+		},
+	});
+
+	//textarea counter
+    const textCounters = document.querySelectorAll('.field-textarea-counter');
+    if (textCounters) {
+		textCounters.forEach(counter => {
+			const textarea = counter.closest('.frm-field-textarea').querySelector('.form-input');
+			const maxLength = textarea.getAttribute('maxlength') || 1000;
+			const warningThreshold = textarea.dataset.counterWarning || 80;
+			
+			function update() {
+				const current = textarea.value.length;
+				counter.textContent = `${current} / ${maxLength}`;
+				
+				// Динамическое изменение стилей
+				const percent = (current / maxLength) * 100;
+				if (percent >= warningThreshold) {
+					counter.classList.add('warning');
+					counter.classList.remove('normal');
+				} else {
+					counter.classList.add('normal');
+					counter.classList.remove('warning');
+				}
+			}
+			
+			textarea.addEventListener('input', update);
+			textarea.addEventListener('focus', update);
+			textarea.addEventListener('blur', update);
+			
+			update();
+		});
+	}
+	
+
+	//copy button
+	document.querySelectorAll('.js-btn-copy').forEach(function(btn) {
+		btn.addEventListener('click', function(e) {
+			e.preventDefault();
+			const content = btn.getAttribute('data-content');
+			if (content) {
+				navigator.clipboard.writeText(content)
+					.then(() => {
+						// alert('Скопировано!');
+					})
+					.catch(err => {
+						// Обработка ошибок, если не удалось скопировать
+						alert('Ошибка копирования');
+					});
+			}
+		});
 	});
 
 
@@ -521,6 +577,60 @@ document.addEventListener("DOMContentLoaded", function() {
 			navigation: {
 				nextEl: nextEl,
 				prevEl: prevEl,
+			},
+		});
+	});
+
+
+	//slider photos thumbs preview
+	document.querySelectorAll('.tiles-thumbs-slider-box').forEach(function(container) {
+		const thumbsEl = container.querySelector('.slider-photos-thumbs .swiper');
+		const mainEl = container.querySelector('.slider-photos-main .swiper');
+		const nextMBtn = container.querySelector('.button-slider-photos-main-next');
+		const prevMBtn = container.querySelector('.button-slider-photos-main-prev');
+		const nextTBtn = container.querySelector('.button-slider-photos-thumbs-next');
+		const prevTBtn = container.querySelector('.button-slider-photos-thumbs-prev');
+		const mainPag = container.querySelector('.slider-photos-main-pagination');
+	
+		const swiperPhotosPreview = new Swiper(thumbsEl, {
+			loop: false,
+			slidesPerGroup: 1,
+			slidesPerView: 6,
+			spaceBetween: 0,
+			threshold: 6,
+			direction: 'vertical',
+			watchSlidesVisibility: true,
+			watchSlidesProgress: true,
+			freeMode: false,
+			navigation: {
+				nextEl: nextTBtn,
+				prevEl: prevTBtn,
+			},
+			breakpoints: {
+				1024: {
+				},
+			},
+		});
+		const swiperPhotosMain = new Swiper(mainEl, {
+			loop: false,
+			slidesPerGroup: 1,
+			slidesPerView: 1,
+			spaceBetween: 0,
+			autoHeight: false,
+			speed: 400,
+			threshold: 5,
+			freeMode: false,
+			watchSlidesProgress: true,
+			navigation: {
+				nextEl: nextMBtn,
+				prevEl: prevMBtn,
+			},
+			pagination: {
+				el: mainPag,
+				clickable: true,
+			},
+			thumbs: {
+				swiper: swiperPhotosPreview,
 			},
 		});
 	});

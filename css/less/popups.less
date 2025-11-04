@@ -1,0 +1,86 @@
+/* ----------------------------------- *\
+			popups styles
+\* ----------------------------------- */
+body.popup-open {
+	overflow: hidden;
+}
+.popup-outer-box {
+	display: none;
+	padding: 20px var(--paddingContainer);
+	animation: fadein ease 0.2s;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	z-index: 100;
+	background: fade(#000, 70);
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow-y: auto;
+	overflow-x: hidden;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+	&::-webkit-scrollbar {
+		width: 0;
+		height: 0;
+	}
+	&.active {
+		display: flex;
+	}
+}
+.popup-box {
+	display: flex;
+	margin: auto;
+	flex-direction: column;
+	flex-shrink: 0;
+	position: relative;
+	overflow: hidden;
+	width: 600px;
+	max-width: 100%;
+	max-height: inherit;
+	background-color: #fff;
+	z-index: 20;
+	.popup-title-wrap, .popup-footer-wrap {
+		width: 100%;
+		flex-shrink: 0;
+	}
+	.popup-content-wrap {
+		width: 100%;
+	}
+	.btn-action-ico {
+		&.ico-close {
+		}
+	}
+	.btn-popup-close {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 2;
+	}
+}
+.popup-mobile {
+	background: #fff;
+	padding: 0 var(--paddingContainer);
+	.popup-box {
+		margin-top: 0;
+		padding: 32px var(--paddingContainer);
+		.popup-title-wrap {
+			margin-bottom: 35px;
+			padding-right: 70px;
+		}
+		.popup-title {
+			font-size: 24px;
+			line-height: 28px;
+			font-weight: bold;
+		}
+		.btn-popup-close {
+			width: 40px;height: 40px;
+			top: 22px;
+			right: var(--paddingContainer);
+			border-radius: 50%;
+		}
+	}
+}
