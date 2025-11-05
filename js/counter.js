@@ -229,4 +229,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			updateButtons(currentValue);
 		});
 	});
+
+
 });

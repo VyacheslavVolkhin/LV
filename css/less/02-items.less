@@ -1,6 +1,55 @@
 /* ----------------------------------- *\
 			items styles
 \* ----------------------------------- */
+.item-tile-info-action {
+	display: flex;
+	align-items: center;
+	min-height: 100%;
+	padding: 12px 12px 12px 16px;
+	border-radius: 12px;
+	background: linear-gradient(92deg, #D2E9A8 2.06%, #98D28B 99.37%);
+	gap: 12px;
+	position: relative;
+	overflow: hidden;
+	&.tile-yellow {
+		background: #FAEFA7;
+		.tile-title-wrap {
+			&:before {
+				aspect-ratio: 155/34;
+				width: 155px;
+				top: -8px;left: -1px;
+				transform: none;
+				background-image: url("data:image/svg+xml,%3Csvg width='155' height='34' viewBox='0 0 155 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.34734 17.4732C8.88042 16.1216 10.7933 16.1216 11.3264 17.4732L12.45 20.3221C12.6128 20.7348 12.9394 21.0615 13.3521 21.2242L16.201 22.3478C17.5527 22.8809 17.5527 24.7938 16.201 25.3269L13.3521 26.4505C12.9394 26.6133 12.6128 26.9399 12.45 27.3526L11.3264 30.2015C10.7933 31.5532 8.88042 31.5532 8.34734 30.2015L7.22373 27.3526C7.06098 26.9399 6.73433 26.6133 6.32166 26.4505L3.47272 25.3269C2.12107 24.7938 2.12107 22.8809 3.47272 22.3478L6.32166 21.2242C6.73432 21.0615 7.06098 20.7348 7.22373 20.3221L8.34734 17.4732Z' fill='white'/%3E%3Cpath d='M94.1722 14.1521C94.5025 13.3145 95.6878 13.3145 96.0181 14.1521L96.7144 15.9174C96.8152 16.1731 97.0176 16.3755 97.2733 16.4764L99.0387 17.1726C99.8762 17.503 99.8762 18.6883 99.0387 19.0186L97.2733 19.7149C97.0176 19.8157 96.8152 20.0181 96.7144 20.2738L96.0181 22.0392C95.6878 22.8767 94.5025 22.8767 94.1722 22.0392L93.4759 20.2738C93.3751 20.0181 93.1726 19.8157 92.9169 19.7149L91.1516 19.0186C90.3141 18.6883 90.314 17.503 91.1516 17.1726L92.9169 16.4764C93.1726 16.3755 93.3751 16.1731 93.4759 15.9174L94.1722 14.1521Z' fill='white'/%3E%3Cpath d='M119.427 11.5063C119.965 10.1418 121.896 10.1418 122.434 11.5063L123.569 14.3824C123.733 14.799 124.063 15.1288 124.479 15.2931L127.356 16.4274C128.72 16.9656 128.72 18.8968 127.356 19.4349L124.479 20.5693C124.063 20.7336 123.733 21.0633 123.569 21.4799L122.434 24.3561C121.896 25.7206 119.965 25.7206 119.427 24.3561L118.293 21.4799C118.128 21.0633 117.799 20.7336 117.382 20.5693L114.506 19.4349C113.141 18.8968 113.141 16.9656 114.506 16.4274L117.382 15.2931C117.799 15.1288 118.128 14.799 118.293 14.3824L119.427 11.5063Z' fill='white'/%3E%3C/svg%3E%0A");
+			}
+		}
+	}
+	.tile-title-wrap {
+		max-width: 120px;
+		position: static;
+		&:before {
+			width: 91px;
+			aspect-ratio: 91/39;
+			top: -1px;left: -7px;
+			transform: none;
+			background-image: url("data:image/svg+xml,%3Csvg width='91' height='39' viewBox='0 0 91 39' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.34734 22.4732C8.88042 21.1216 10.7933 21.1216 11.3264 22.4732L12.45 25.3221C12.6128 25.7348 12.9394 26.0615 13.3521 26.2242L16.201 27.3478C17.5527 27.8809 17.5527 29.7938 16.201 30.3269L13.3521 31.4505C12.9394 31.6133 12.6128 31.9399 12.45 32.3526L11.3264 35.2015C10.7933 36.5532 8.88042 36.5532 8.34734 35.2015L7.22373 32.3526C7.06098 31.9399 6.73433 31.6133 6.32166 31.4505L3.47272 30.3269C2.12107 29.7938 2.12107 27.8809 3.47272 27.3478L6.32166 26.2242C6.73432 26.0615 7.06098 25.7348 7.22373 25.3221L8.34734 22.4732Z' fill='%23FFEC71'/%3E%3Cpath d='M55.1722 3.15209C55.5025 2.31454 56.6878 2.31454 57.0181 3.15208L57.7144 4.91743C57.8152 5.17314 58.0176 5.37555 58.2733 5.4764L60.0387 6.17264C60.8762 6.50296 60.8762 7.6883 60.0387 8.01862L58.2733 8.71486C58.0176 8.81571 57.8152 9.01813 57.7144 9.27383L57.0181 11.0392C56.6878 11.8767 55.5025 11.8767 55.1722 11.0392L54.4759 9.27383C54.3751 9.01813 54.1726 8.81571 53.9169 8.71486L52.1516 8.01862C51.3141 7.6883 51.314 6.50296 52.1516 6.17264L53.9169 5.4764C54.1726 5.37555 54.3751 5.17314 54.4759 4.91743L55.1722 3.15209Z' fill='%23FFEC71'/%3E%3Cpath d='M79.4269 3.50632C79.9651 2.14178 81.8963 2.14177 82.4344 3.50631L83.5688 6.38243C83.7331 6.79904 84.0628 7.12881 84.4795 7.29311L87.3556 8.42744C88.7201 8.9656 88.7201 10.8968 87.3556 11.4349L84.4795 12.5693C84.0628 12.7336 83.7331 13.0633 83.5688 13.4799L82.4344 16.3561C81.8963 17.7206 79.9651 17.7206 79.4269 16.3561L78.2926 13.4799C78.1283 13.0633 77.7985 12.7336 77.3819 12.5693L74.5058 11.4349C73.1413 10.8968 73.1413 8.9656 74.5058 8.42744L77.3819 7.29311C77.7985 7.12881 78.1283 6.79904 78.2926 6.38243L79.4269 3.50632Z' fill='%23FFEC71'/%3E%3C/svg%3E%0A");
+		}
+	}
+	.tile-title {
+		display: block;
+		font-size: 13px;
+		font-weight: bold;
+		line-height: 1;
+		position: relative;
+		z-index: 2;
+	}
+	.btn {
+		height: 40px;
+		padding: 0 12px;
+		font-size: 15px;
+		font-weight: 500;
+		border-radius: 8px;
+	}
+}
 .item-tile-action-box {
 	display: block;
 	position: relative;
@@ -958,6 +1007,9 @@ a.elm-user {
 	border-radius: 16px;
 	box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.06);
 	padding: 3rem;
+	.panel-items-title-wrap {
+		display: none;
+	}
 	.panel-item-wrap {
 		margin-bottom: 2.4rem;
 	}
@@ -1248,6 +1300,60 @@ a.elm-user {
 			height: 48px;
 		}
 	}
+	.elm-review-panel {
+		.panel-items-wrap {
+			animation: fadein ease 0.2s;
+			display: none;
+		}
+		&.active {
+			.panel-items-wrap {
+				display: block;
+				position: fixed;
+				bottom: 0;left: 0;right: 0;
+				z-index: 120;
+				background: #fff;
+				border-radius: 16px 16px 0 0;
+				box-shadow: 0 -4px 30px 0 rgba(0, 0, 0, 0.30);
+				padding: 0 var(--paddingContainer) 36px var(--paddingContainer);
+				.panel-item-wrap {
+					display: block;
+					padding-right: 30px;
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+			.panel-items-title-wrap {
+				display: block;
+				padding: 34px 0 30px 0;
+			}
+			.panel-items-title {
+				font-size: 20px;
+				line-height: 1.2;
+				font-weight: bold;
+				margin: 0;
+			}
+			.btn-panel-close {
+				display: block;
+				position: absolute;
+				cursor: pointer;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 34px;
+				&:before {
+					content: "";
+					display: block;
+					position: absolute;
+					top: 12px;left: 50%;
+					width: 40px;height: 6px;
+					border-radius: 3px;
+					background: #E5E6E3;
+					margin-left: -20px;
+				}
+			}
+		}
+	}
 }
 @media (min-width: 640px) {
 	.item-tile-alphabet {
@@ -1371,6 +1477,30 @@ a.elm-user {
 	
 }
 @media (min-width: 1024px) {
+	.item-tile-info-action {
+		padding: 20px 20px 20px 24px;
+		gap: 32px;
+		&.type-yellow {
+			&:before {
+				width: 180px;
+			}
+		}
+		.tile-title-wrap {
+			max-width: 150px;
+			&:before {
+				left: 5px;
+				top: 5px;
+			}
+		}
+		.tile-title {
+			font-size: 16px;
+			line-height: 20px;
+		}
+		.btn {
+			height: 48px;
+			font-size: 18px;
+		}
+	}
 	.item-tile-feature {
 		.tile-title {
 			font-size: 2rem;
@@ -1633,4 +1763,5 @@ a.elm-user {
 		}
 	}
 }
+
 

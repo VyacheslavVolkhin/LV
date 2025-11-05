@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+	const mediaQuery = window.matchMedia('(min-width: 1024px)');
+
 	//fancybox
 	Fancybox.bind("[data-fancybox]", {
 		Toolbar: {
@@ -11,6 +13,70 @@ document.addEventListener("DOMContentLoaded", function() {
 		},
 	});
 
+
+	//reviews stat toggle
+	const toggleBtns = document.querySelectorAll('.js-popup-review-toggle');
+const popup = document.querySelector('.js-popup-review');
+
+if (toggleBtns.length && popup) {
+  // Открытие/закрытие по клику на любую кнопку toggle
+  toggleBtns.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+	  e.preventDefault();
+      popup.classList.toggle('active');
+    });
+  });
+
+  // Закрытие по клику вне попапа
+  document.addEventListener('click', function(e) {
+    // Проверяем, что клик был не по кнопкам и не по попапу
+    const isClickOnToggle = Array.from(toggleBtns).some(btn => btn.contains(e.target));
+    
+    if (!popup.contains(e.target) && !isClickOnToggle) {
+      popup.classList.remove('active');
+    }
+  });
+
+  // Предотвращаем закрытие при клике внутри попапа
+  popup.addEventListener('click', function(e) {
+    e.stopPropagation();
+  });
+}
+
+
+	//sticky panel get active
+	const stickyPanel = document.getElementById('stickyPanel');
+	function updateStickyState() {
+	const rect = stickyPanel.getBoundingClientRect();
+	if (rect.top === 0) {
+		stickyPanel.classList.add('active');
+	} else {
+		stickyPanel.classList.remove('active');
+	}
+	}
+	let ticking = false;
+	window.addEventListener('scroll', () => {
+	if (!ticking) {
+		requestAnimationFrame(() => {
+		updateStickyState();
+		ticking = false;
+		});
+		ticking = true;
+	}
+	});
+	window.addEventListener('resize', updateStickyState);
+
+
+	//mobile tabs active 
+    if (mediaQuery.matches) {
+        const firstTabMobileButton = document.querySelector('.tabs-mobile-box .menu li:first-child .btn');
+        if (firstTabMobileButton) {
+            firstTabMobileButton.classList.add('active');
+        }
+    }
+	
+	
 	//textarea counter
     const textCounters = document.querySelectorAll('.field-textarea-counter');
     if (textCounters) {
@@ -66,6 +132,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	const filterButtonOpen = document.querySelector('.js-filter-open');
 	const filterButtonClose = document.querySelector('.js-filter-close');
 	const filterButtonApply = document.querySelector('.js-filter-apply');
+	const filterButtonReset = document.querySelector('js-filter-reset');
 	if (filterButtonOpen) {
 		filterButtonOpen.addEventListener("click", function(event) {
 				document.body.classList.add("filter-show");
@@ -79,10 +146,29 @@ document.addEventListener("DOMContentLoaded", function() {
 		})
 	}
 	if (filterButtonApply) {
-		filterButtonApply.addEventListener("click", function(event) {
+		filterButtonApply.addEventListener('click', function() {
+			event.preventDefault();
+			setTimeout(() => {
 				document.body.classList.remove("filter-show");
-				event.preventDefault();
-		})
+				if (filterButtonOpen) {
+					const selectedCheckboxes = document.querySelectorAll('.frm-select input[type="checkbox"]:checked');
+					
+					if (selectedCheckboxes.length > 0) {
+						filterButtonOpen.setAttribute('data-counter', selectedCheckboxes.length);
+					} else {
+						filterButtonOpen.removeAttribute('data-counter');
+					}
+				}
+			}, 100);
+		});
+	}
+	if (filterButtonReset) {
+		filterButtonReset.addEventListener('click', function() {
+			const filterButtonOpen = document.querySelector('.js-filter-open');
+			if (filterButtonOpen) {
+				filterButtonOpen.removeAttribute('data-counter');
+			}
+		});
 	}
 
 	
@@ -143,23 +229,46 @@ document.addEventListener("DOMContentLoaded", function() {
 	let tglButtons = document.querySelectorAll('.js-btn-tgl')
 	let addButtons = document.querySelectorAll('.js-btn-add')
 	let buttonsTglOne = document.querySelectorAll('.js-btn-tgl-one');
-	if (tglButtons) 
-		for (i = 0;i < tglButtons.length;i++) {
+	if (tglButtons) {
+		for (i = 0; i < tglButtons.length; i++) {
 			tglButtons[i].addEventListener('click', function(e) {
-				this.classList.contains('active') ? this.classList.remove('active') : this.classList.add('active')
-				e.preventDefault()
-				return false
-			})
-		}
-	if (addButtons) {
-		for (i = 0;i < addButtons.length;i++) {
-			addButtons[i].addEventListener('click', function(e) {
-				if (!this.classList.contains('active')) {
-					this.classList.add('active');
-					e.preventDefault()
-					return false
+				const currentSync = this.getAttribute('data-sync');
+				if (currentSync) {
+					const isActive = this.classList.contains('active');
+					const syncButtons = document.querySelectorAll(`.js-btn-tgl[data-sync="${currentSync}"]`);
+					syncButtons.forEach(button => {
+						if (isActive) {
+							button.classList.remove('active');
+						} else {
+							button.classList.add('active');
+						}
+					});
+				} else {
+					this.classList.toggle('active');
 				}
-			})
+				
+				e.preventDefault();
+				return false;
+			});
+		}
+	}
+	if (addButtons) {
+		for (i = 0; i < addButtons.length; i++) {
+			addButtons[i].addEventListener('click', function(e) {
+				const currentSync = this.getAttribute('data-sync');
+				if (this.classList.contains('active')) {
+					return;
+				}
+				if (currentSync) {
+					document.querySelectorAll(`.js-btn-add[data-sync="${currentSync}"]`)
+						.forEach(button => button.classList.add('active'));
+				} else {
+					this.classList.add('active');
+				}
+				
+				e.preventDefault();
+				return false;
+			});
 		}
 	}
 	if (buttonsTglOne) {

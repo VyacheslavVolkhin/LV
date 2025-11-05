@@ -283,12 +283,12 @@
 								</div>
 							</div>
 							<div class="cart-wrap">
-								<a href="" class="btn js-btn-add">
+								<a href="" class="btn js-btn-add" data-sync="cartbutton">
 									<div class="button-title" data-title="В корзину" data-title-active="В корзине"></div>
 								</a>
 							</div>
 							<div class="actions-wrap">
-							<a href="" class="btn button-light btn-action-ico button-active-toggle ico-fav-toggle js-btn-tgl"></a>
+							<a href="" class="btn button-light btn-action-ico button-active-toggle ico-fav-toggle js-btn-tgl" data-sync="favbutton"></a>
 							<a href="" class="btn button-light btn-action-ico ico-share"></a>
 							</div>
 						</div>
@@ -310,6 +310,47 @@
 					<!--/info-inner-wrap-->
 				</div>
 				<!--/info-card-box-->
+
+				<!--card-panel-box-->
+				<div class="card-panel-box panel-hidden" id="stickyPanel">
+					<div class="panel-content-wrap">
+						<div class="photo-inner-wrap">
+							<div class="elm-photo photo-contain">
+								<img src="./img/card.png" alt="">
+							</div>
+						</div>
+						<div class="title-inner-wrap">
+							<div class="section-title">Berberine, улучшенный комплекс, Nature’s Craft</div>
+							<div class="elm-rate-total">
+								<div class="rate-total">4.8</div>
+								<div class="rate-reviews">20 отзывов</div>
+							</div>
+						</div>
+						<div class="prices-inner-wrap">
+							<div class="elm-price" data-unit="$">9.99</div>
+							<div class="elm-price price-old" data-unit="$">12.99</div>
+						</div>
+						<div class="actions-inner-wrap">
+							<div class="counter-wrap">
+								<div class="frm-field-counter js-counter">
+									<button class="js-button-counter-plus btn button-light btn-action-ico ico-plus button-plus"></button>
+									<button class="js-button-counter-minus btn button-light btn-action-ico ico-minus button-minus"></button>
+									<input type="text" class="form-input js-input-counter" data-unit="" data-step="1" data-min="0" data-max="15" value="1">
+								</div>
+							</div>
+							<div class="cart-wrap">
+								<a href="" class="btn js-btn-add" data-sync="cartbutton">
+									<div class="button-title" data-title="В корзину" data-title-active="В корзине"></div>
+								</a>
+							</div>
+							<div class="actions-wrap">
+								<a href="" class="btn button-light btn-action-ico button-active-toggle ico-fav-toggle js-btn-tgl" data-sync="favbutton"></a>
+								<a href="" class="btn button-light btn-action-ico ico-share"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--/card-panel-box-->
 
 				<!--tabs-box-->
 				<div class="tabs-box js-tabs-nav elm-hidden-mobile">
@@ -366,6 +407,40 @@
 								</a>
 							</div>
 							<!--/info-article-box-->
+							<!--info-tiles-box-->
+							<div class="info-tiles-box">
+								<div class="items-wrap">
+									<!--item wrap-->
+									<div class="item-wrap">
+										<div class="item-tile-info-action">
+											<div class="tile-title-wrap elm-decor">
+												<div class="tile-title">Узнайте больше о&nbsp;производителе</div>
+											</div>
+											<div class="tile-action-wrap">
+												<a href="" class="btn button-white button-arrow">
+													<div class="button-title">Natures Craft</div>
+												</a>
+											</div>
+										</div>
+									</div>
+									<!--/item wrap-->
+									<!--item wrap-->
+									<div class="item-wrap">
+										<div class="item-tile-info-action tile-yellow">
+											<div class="tile-title-wrap elm-decor">
+												<div class="tile-title">Узнайте больше о&nbsp;берберине</div>
+											</div>
+											<div class="tile-action-wrap">
+												<a href="" class="btn button-white button-arrow">
+													<div class="button-title">В справочник</div>
+												</a>
+											</div>
+										</div>
+									</div>
+									<!--/item wrap-->
+								</div>
+							</div>
+							<!--/info-tiles-box-->
 						</div>
 					</div>
 					<!--/tab-box-->
@@ -673,75 +748,81 @@
 								</div>
 								<div class="info-inner-wrap">
 									<!--elm-review-panel-->
-									<div class="elm-review-panel">
+									<div class="elm-review-panel js-popup-review">
 										<div class="elm-rate-total">
 											<div class="rate-total">4,8</div>
 											<div class="rate-reviews"><a href="">20 отзывов</a></div>
 										</div>
-										<div class="panel-item-wrap">
-											<div class="panel-title-wrap">
-												<div class="elm-rates" data-rate="5">
-													<div class="elm-rate"></div>
-													<div class="elm-rate"></div>
-													<div class="elm-rate"></div>
-													<div class="elm-rate"></div>
-													<div class="elm-rate"></div>
-												</div>
-												<div class="panel-title">16</div>
+										<div class="panel-items-wrap">
+											<div class="panel-items-title-wrap">
+												<div class="btn-panel-close js-popup-review-toggle"></div>
+												<div class="panel-items-title">Статистика</div>
 											</div>
-											<div class="elm-scale" data-scale="95"></div>
-										</div>
-										<div class="panel-item-wrap">
-											<div class="panel-title-wrap">
-												<div class="elm-rates" data-rate="4">
-													<div class="elm-rate"></div>
-													<div class="elm-rate"></div>
-													<div class="elm-rate"></div>
-													<div class="elm-rate"></div>
-													<div class="elm-rate"></div>
+											<div class="panel-item-wrap">
+												<div class="panel-title-wrap">
+													<div class="elm-rates" data-rate="5">
+														<div class="elm-rate"></div>
+														<div class="elm-rate"></div>
+														<div class="elm-rate"></div>
+														<div class="elm-rate"></div>
+														<div class="elm-rate"></div>
+													</div>
+													<div class="panel-title">16</div>
 												</div>
-												<div class="panel-title">3</div>
+												<div class="elm-scale" data-scale="95"></div>
 											</div>
-											<div class="elm-scale" data-scale="20"></div>
-										</div>
-										<div class="panel-item-wrap">
-											<div class="panel-title-wrap">
-												<div class="elm-rates" data-rate="3">
-													<div class="elm-rate"></div>
-													<div class="elm-rate"></div>
-													<div class="elm-rate"></div>
-													<div class="elm-rate"></div>
-													<div class="elm-rate"></div>
+											<div class="panel-item-wrap">
+												<div class="panel-title-wrap">
+													<div class="elm-rates" data-rate="4">
+														<div class="elm-rate"></div>
+														<div class="elm-rate"></div>
+														<div class="elm-rate"></div>
+														<div class="elm-rate"></div>
+														<div class="elm-rate"></div>
+													</div>
+													<div class="panel-title">3</div>
 												</div>
-												<div class="panel-title">1</div>
+												<div class="elm-scale" data-scale="20"></div>
 											</div>
-											<div class="elm-scale" data-scale="5"></div>
-										</div>
-										<div class="panel-item-wrap">
-											<div class="panel-title-wrap">
-												<div class="elm-rates" data-rate="2">
-													<div class="elm-rate"></div>
-													<div class="elm-rate"></div>
-													<div class="elm-rate"></div>
-													<div class="elm-rate"></div>
-													<div class="elm-rate"></div>
+											<div class="panel-item-wrap">
+												<div class="panel-title-wrap">
+													<div class="elm-rates" data-rate="3">
+														<div class="elm-rate"></div>
+														<div class="elm-rate"></div>
+														<div class="elm-rate"></div>
+														<div class="elm-rate"></div>
+														<div class="elm-rate"></div>
+													</div>
+													<div class="panel-title">1</div>
 												</div>
-												<div class="panel-title">0</div>
+												<div class="elm-scale" data-scale="5"></div>
 											</div>
-											<div class="elm-scale" data-scale="5"></div>
-										</div>
-										<div class="panel-item-wrap">
-											<div class="panel-title-wrap">
-												<div class="elm-rates" data-rate="1">
-													<div class="elm-rate"></div>
-													<div class="elm-rate"></div>
-													<div class="elm-rate"></div>
-													<div class="elm-rate"></div>
-													<div class="elm-rate"></div>
+											<div class="panel-item-wrap">
+												<div class="panel-title-wrap">
+													<div class="elm-rates" data-rate="2">
+														<div class="elm-rate"></div>
+														<div class="elm-rate"></div>
+														<div class="elm-rate"></div>
+														<div class="elm-rate"></div>
+														<div class="elm-rate"></div>
+													</div>
+													<div class="panel-title">0</div>
 												</div>
-												<div class="panel-title">0</div>
+												<div class="elm-scale" data-scale="5"></div>
 											</div>
-											<div class="elm-scale" data-scale="5"></div>
+											<div class="panel-item-wrap">
+												<div class="panel-title-wrap">
+													<div class="elm-rates" data-rate="1">
+														<div class="elm-rate"></div>
+														<div class="elm-rate"></div>
+														<div class="elm-rate"></div>
+														<div class="elm-rate"></div>
+														<div class="elm-rate"></div>
+													</div>
+													<div class="panel-title">0</div>
+												</div>
+												<div class="elm-scale" data-scale="5"></div>
+											</div>
 										</div>
 										<div class="panel-action-wrap">
 											<a href="" class="btn">
