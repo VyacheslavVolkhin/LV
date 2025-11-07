@@ -18,6 +18,7 @@
   --lhsize: 1.444;
   --mbsize: 1.444em;
   --mainRadius: 24px;
+  --mainRadius: 24px;
   --mainRadius: 2.4rem;
   --icoSize: 24px;
   --min: 360px;
@@ -591,6 +592,7 @@ html.with-fancybox body.hide-scrollbar {
   top: 100%;
   right: -10px;
   margin-top: 22px;
+  width: 308px;
   width: 308px;
   width: 30.8rem;
   border-radius: 2rem;
@@ -2230,8 +2232,10 @@ html.with-fancybox body.hide-scrollbar {
   display: -ms-flexbox;
   display: flex;
   gap: 40px;
+  gap: 40px;
   gap: 4rem;
   min-height: 200px;
+  padding: 44px;
   padding: 44px;
   padding: 4.4rem;
 }
@@ -2249,6 +2253,7 @@ html.with-fancybox body.hide-scrollbar {
 .item-tile-article-main .tile-actions-wrap {
   display: -ms-flexbox;
   display: flex;
+  margin: 28px 0 0 0;
   margin: 28px 0 0 0;
   margin: 2.8rem 0 0 0;
   gap: 6px;
@@ -3050,12 +3055,14 @@ a.elm-user:hover {
   border-radius: 16px;
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.06);
   padding: 30px;
+  padding: 30px;
   padding: 3rem;
 }
 .elm-review-panel .panel-items-title-wrap {
   display: none;
 }
 .elm-review-panel .panel-item-wrap {
+  margin-bottom: 24px;
   margin-bottom: 24px;
   margin-bottom: 2.4rem;
 }
@@ -3081,6 +3088,7 @@ a.elm-user:hover {
 }
 .elm-review-panel .elm-rate-total {
   margin-bottom: 40px;
+  margin-bottom: 40px;
   margin-bottom: 4rem;
   font-size: 16px;
   font-weight: 500;
@@ -3096,6 +3104,7 @@ a.elm-user:hover {
   width: 32px;
   height: 32px;
   left: 16px;
+  left: 16px;
   left: 1.6rem;
   top: 50%;
   margin-top: -16px;
@@ -3104,12 +3113,14 @@ a.elm-user:hover {
 }
 .elm-review-panel .elm-rate-total .rate-reviews {
   padding-left: 34px;
+  padding-left: 34px;
   padding-left: 3.4rem;
   color: inherit;
   font-size: 1em;
   font-weight: inherit;
 }
 .elm-review-panel .elm-rate-total .rate-reviews:before {
+  left: 17px;
   left: 17px;
   left: 1.7rem;
   margin-left: -1px;
@@ -4206,6 +4217,7 @@ a.elm-user:hover {
 .card-panel-box {
   border-bottom: 1px solid var(--clr-bg-vlight);
   margin-bottom: 50px;
+  margin-bottom: 50px;
   margin-bottom: 5rem;
   transition: all ease 0.2s;
   position: sticky;
@@ -4521,6 +4533,7 @@ a.elm-user:hover {
   margin-bottom: var(--sectionMargin);
   position: relative;
   margin-top: 60px;
+  margin-top: 60px;
   margin-top: 6rem;
 }
 .tab-box {
@@ -4531,6 +4544,7 @@ a.elm-user:hover {
 }
 .tab-box .tab-title-button {
   display: block;
+  font-size: 36px;
   font-size: 36px;
   font-size: 3.6rem;
   line-height: inherit;
@@ -4889,6 +4903,7 @@ a.elm-user:hover {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 10px 30px;
+  gap: 10px 30px;
   gap: 10px 3rem;
   -ms-flex-pack: justify;
       justify-content: space-between;
@@ -5033,11 +5048,14 @@ a.elm-user:hover {
 }
 .tiles-actions-box .items-wrap {
   margin: 0 -10px;
+  margin: 0 -10px;
   margin: 0 -1rem;
+  gap: 20px 0;
   gap: 20px 0;
   gap: 2rem 0;
 }
 .tiles-actions-box .item-wrap {
+  padding: 0 10px;
   padding: 0 10px;
   padding: 0 1rem;
   width: 100%;
@@ -5115,10 +5133,12 @@ a.elm-user:hover {
 }
 .tiles-questions-box .items-wrap {
   margin: 0 -12px;
+  margin: 0 -12px;
   margin: 0 -1.2rem;
   gap: 12px 0;
 }
 .tiles-questions-box .item-wrap {
+  padding: 0 12px;
   padding: 0 12px;
   padding: 0 1.2rem;
   width: 100%;
@@ -5604,6 +5624,7 @@ a.elm-user:hover {
   background: #fff;
   border-radius: 12px;
   padding: 28px 28px 12px 28px;
+  padding: 28px 28px 12px 28px;
   padding: 2.8rem 2.8rem 1.2rem 2.8rem;
 }
 .filter-box .filter-section-title {
@@ -5618,9 +5639,11 @@ a.elm-user:hover {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0 -12px;
+  margin: 0 -12px;
   margin: 0 -1.2rem;
 }
 .filter-box .filter-column-wrap {
+  padding: 0 12px;
   padding: 0 12px;
   padding: 0 1.2rem;
   width: 33.33%;
@@ -5631,6 +5654,7 @@ a.elm-user:hover {
   -ms-flex-direction: column;
       flex-direction: column;
   gap: 12px;
+  gap: 12px;
   gap: 1.2rem;
 }
 .filter-box .filter-content-wrap {
@@ -5638,7 +5662,9 @@ a.elm-user:hover {
   width: 100%;
   position: relative;
   padding-top: 40px;
+  padding-top: 40px;
   padding-top: 4rem;
+  padding-bottom: 40px;
   padding-bottom: 40px;
   padding-bottom: 4rem;
   padding-left: var(--paddingContainer);
@@ -5660,12 +5686,14 @@ a.elm-user:hover {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   padding: 40px var(--paddingContainer) 10px var(--paddingContainer);
+  padding: 40px var(--paddingContainer) 10px var(--paddingContainer);
   padding: 4rem var(--paddingContainer) 1rem var(--paddingContainer);
   text-align: center;
 }
 .filter-box .filter-actions-wrap {
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  padding: 40px var(--paddingContainer) 50px var(--paddingContainer);
   padding: 40px var(--paddingContainer) 50px var(--paddingContainer);
   padding: 4rem var(--paddingContainer) 5rem var(--paddingContainer);
 }
@@ -5680,9 +5708,12 @@ a.elm-user:hover {
 }
 .filter-box .filter-actions-wrap .btn {
   height: 60px;
+  height: 60px;
   height: 6rem;
   padding: 0 34px;
+  padding: 0 34px;
   padding: 0 3.4rem;
+  font-size: 20px;
   font-size: 20px;
   font-size: 2rem;
   font-weight: 600;
@@ -5700,7 +5731,9 @@ a.elm-user:hover {
   position: absolute;
   top: 0;
   left: -28px;
+  left: -28px;
   left: -2.8rem;
+  right: -28px;
   right: -28px;
   right: -2.8rem;
   height: 1px;
@@ -5729,6 +5762,7 @@ a.elm-user:hover {
 }
 .filter-box .filter-title {
   font-size: 42px;
+  font-size: 42px;
   font-size: 4.2rem;
   font-weight: bold;
   line-height: 1.2;
@@ -5740,6 +5774,7 @@ a.elm-user:hover {
   height: 52px;
   border-radius: 50%;
   position: fixed;
+  top: 40px;
   top: 40px;
   top: 4rem;
   right: var(--paddingContainer);

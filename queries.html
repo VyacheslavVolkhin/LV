@@ -915,62 +915,467 @@
 
         <!-- page -->
         <div class="page-full">
-            <br><br><br><br><br>
-            <style>
-                .ul-menu {
-                    font-size: 1.5em;
-                    line-height: 1.15;
-                }
 
-                .ul-menu li {
-                    padding-left: 0;
-                    margin: 0;
-                }
 
-                .ul-menu li a {
-                    display: inline-block;
-                    padding: 3px 0;
-                }
+            <!--nav-box-->
+            <div class="nav-box">
+                <a href="" class="btn button-light">
+                    <div class="button-ico">
+                        <img src="./img/icons/arrow-slider.svg" alt="">
+                    </div>
+                    <div class="button-title">Вернуться</div>
+                </a>
+            </div>
+            <!--/nav-box-->
 
-                .ul-menu li:before {
-                    display: none;
-                }
+            <!--card-panel-box-->
+            <div class="card-panel-box" id="stickyPanel">
+                <div class="panel-content-wrap">
+                    <div class="photo-inner-wrap">
+                        <div class="elm-photo photo-contain">
+                            <img src="./img/card.png" alt="">
+                        </div>
+                    </div>
+                    <div class="title-inner-wrap">
+                        <div class="section-title">Berberine, улучшенный комплекс, Nature’s Craft</div>
+                        <div class="elm-rate-total">
+                            <div class="rate-total">4.8</div>
+                            <div class="rate-reviews">20 отзывов</div>
+                        </div>
+                    </div>
+                    <div class="prices-inner-wrap">
+                        <div class="elm-price" data-unit="$">9.99</div>
+                        <div class="elm-price price-old" data-unit="$">12.99</div>
+                    </div>
+                    <div class="actions-inner-wrap">
+                        <div class="counter-wrap">
+                            <div class="frm-field-counter js-counter">
+                                <button class="js-button-counter-plus btn button-light btn-action-ico ico-plus button-plus"></button>
+                                <button class="js-button-counter-minus btn button-light btn-action-ico ico-minus button-minus"></button>
+                                <input type="text" class="form-input js-input-counter" data-unit="" data-step="1" data-min="0" data-max="15" value="1">
+                            </div>
+                        </div>
+                        <div class="cart-wrap">
+                            <a href="" class="btn js-btn-add">
+                                <div class="button-title" data-title="В корзину" data-title-active="В корзине"></div>
+                            </a>
+                        </div>
+                        <div class="actions-wrap">
+                            <a href="" class="btn button-light btn-action-ico button-active-toggle ico-fav-toggle js-btn-tgl"></a>
+                            <a href="" class="btn button-light btn-action-ico ico-share"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/card-panel-box-->
 
-                .ul-menu .li-sep {
-                    font-size: 0.8em;
-                    font-weight: bold;
-                    margin-top: 2em;
-                    padding-bottom: 0.6em;
-                }
+            <!--title-box-->
+            <div class="title-box">
+                <div class="title-wrap">
+                    <h1 class="page-title section-title">Вопросы</h1>
+                </div>
+            </div>
+            <!--/title-box-->
 
-                .ul-menu .li-sep:first-child {
-                    margin-top: 0;
-                }
-            </style>
-            <ul class="ul-menu">
-                <li class="li-sep">Основные страницы</li>
-                <li><a href="main.html">Главная</a></li>
-                <li><a href="brands.html">Все бренды</a></li>
-                <li><a href="catalog.html">Каталог</a></li>
-                <li><a href="category-brand.html">Категория бренд</a></li>
-                <li><a href="category.html">Категория</a></li>
-                <li><a href="card.html">Карточка товара</a></li>
-                <li><a href="reviews.html">Карточка товара - отзывы</a></li>
-                <li><a href="queries.html">Карточка товара - вопросы</a></li>
+            <!--tiles-list-box-->
+            <div class="tiles-list-box">
 
-                <!-- <li class="li-sep">Текстовые страницы</li>
-					<li><a href="about.html">О компании</a></li>
-					
-					<li class="li-sep">Страницы регистрации и входа</li>
-					<li><a href="login.html">Вход</a></li>
-					
-					<li class="li-sep">Личный кабинет</li>
-					<li><a href="lk-data.html">Мои данные</a></li>
-					
-					<li class="li-sep">Всплывающие окна</li>
-					<li><a href="" class="js-popup-open" data-popup="popup-callback">Popup callback</a></li> -->
-            </ul>
-            <br><br><br><br><br>
+                <div class="items-inner-wrap">
+                    <!--form-inner-wrap-->
+                    <div class="form-inner-wrap">
+                        <div class="form-action-wrap">
+                            <div class="total-wrap">20 вопросов</div>
+                            <a href="" class="btn button-arrow js-popup-open" data-popup="popup-query">
+                                <div class="button-title">Задать вопрос</div>
+                            </a>
+                        </div>
+                        <div class="form-content-wrap">
+                            <form action="/" class="frm-content">
+                                <div class="frm-title-wrap">
+                                    <div class="frm-title">Задайте свой вопрос о товаре</div>
+                                </div>
+                                <div class="frm-row">
+                                    <textarea class="form-input" placeholder="Ваш вопрос"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!--/form-inner-wrap-->
+                    <!-- sort -->
+                    <div class="sort-wrap">
+                        <div class="frm-field-select js-field-select">
+                            <a href="" class="btn button-light button-select-toggle js-field-button-select">
+                                <div class="button-ico">
+                                    <img src="./img/icons/sort.svg" alt="">
+                                </div>
+                                <div class="button-title" data-placeholder="Сортировка"></div>
+                            </a>
+                            <div class="select-content-block js-field-content-block">
+                                <div class="select-title-wrap">
+                                    <div class="select-title">Сортировка</div>
+                                    <a href="" class="button-select-close js-field-button-select-close"></a>
+                                </div>
+                                <div class="select-menu-wrap">
+                                    <div class="scroll-inner-wrap">
+                                        <ul class="menu">
+                                            <li>
+                                                <div class="frm-select">
+                                                    <input type="radio" name="sort" id="sort-01">
+                                                    <label for="sort-01">Сначала новые</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="frm-select">
+                                                    <input type="radio" name="sort" id="sort-02">
+                                                    <label for="sort-02">По возрастанию цены</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="frm-select">
+                                                    <input type="radio" name="sort" id="sort-03">
+                                                    <label for="sort-03">По убыванию цены</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="frm-select">
+                                                    <input type="radio" name="sort" id="sort-04">
+                                                    <label for="sort-04">По рейтингу</label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="select-action-wrap">
+                                    <div class="select-action">
+                                        <a href="" class="btn button-hover-att-second button-select-apply js-field-button-select-close">
+                                            <div class="button-title">Применить</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /sort -->
+                    <div class="items-wrap">
+                        <!--item wrap-->
+                        <div class="item-wrap">
+                            <div class="item-tile-query">
+                                <div class="tile-title-wrap">
+                                    <div class="tile-title">Александр</div>
+                                    <div class="tile-info">20 сентября 2025</div>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <p>Здравствуйте. напишите пожалуйста состав БАД берберин. из чего состоит содержимое</p>
+                                </div>
+                            </div>
+                            <div class="item-tile-answer">
+                                <div class="tile-title-wrap">
+                                    <div class="tile-title">Ответ Longa Vida</div>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <p>Добрый день. Состав препарата берберин содержит только натуральные компоненты - экстракт растения (ягод) берберина и желатин для наполнения капсулы.</p>
+                                </div>
+                                <div class="elm-vote-set">
+                                    <div class="vote-title">Ответ был полезен?</div>
+                                    <div class="vote-actions">
+                                        <div class="vote-button btn-action-ico ico-vote-up"></div>
+                                        <div class="vote-button btn-action-ico ico-vote-down"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/item wrap-->
+                        <!--item wrap-->
+                        <div class="item-wrap">
+                            <div class="item-tile-query">
+                                <div class="tile-title-wrap">
+                                    <div class="tile-title">Александр</div>
+                                    <div class="tile-info">20 сентября 2025</div>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <p>Здравствуйте. напишите пожалуйста состав БАД берберин. из чего состоит содержимое</p>
+                                </div>
+                            </div>
+                            <div class="item-tile-answer">
+                                <div class="tile-title-wrap">
+                                    <div class="tile-title">Ответ Longa Vida</div>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <p>Добрый день. Состав препарата берберин содержит только натуральные компоненты - экстракт растения (ягод) берберина и желатин для наполнения капсулы.</p>
+                                </div>
+                                <div class="elm-vote-set">
+                                    <div class="vote-title">Ответ был полезен?</div>
+                                    <div class="vote-actions">
+                                        <div class="vote-button btn-action-ico ico-vote-up"></div>
+                                        <div class="vote-button btn-action-ico ico-vote-down"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/item wrap-->
+                        <!--item wrap-->
+                        <div class="item-wrap">
+                            <div class="item-tile-query">
+                                <div class="tile-title-wrap">
+                                    <div class="tile-title">Александр</div>
+                                    <div class="tile-info">20 сентября 2025</div>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <p>Здравствуйте. напишите пожалуйста состав БАД берберин. из чего состоит содержимое</p>
+                                </div>
+                            </div>
+                            <div class="item-tile-answer">
+                                <div class="tile-title-wrap">
+                                    <div class="tile-title">Ответ Longa Vida</div>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <p>Добрый день. Состав препарата берберин содержит только натуральные компоненты - экстракт растения (ягод) берберина и желатин для наполнения капсулы.</p>
+                                </div>
+                                <div class="elm-vote-set">
+                                    <div class="vote-title">Ответ был полезен?</div>
+                                    <div class="vote-actions">
+                                        <div class="vote-button btn-action-ico ico-vote-up"></div>
+                                        <div class="vote-button btn-action-ico ico-vote-down"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/item wrap-->
+                        <!--item wrap-->
+                        <div class="item-wrap">
+                            <div class="item-tile-query">
+                                <div class="tile-title-wrap">
+                                    <div class="tile-title">Александр</div>
+                                    <div class="tile-info">20 сентября 2025</div>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <p>Здравствуйте. напишите пожалуйста состав БАД берберин. из чего состоит содержимое</p>
+                                </div>
+                            </div>
+                            <div class="item-tile-answer">
+                                <div class="tile-title-wrap">
+                                    <div class="tile-title">Ответ Longa Vida</div>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <p>Добрый день. Состав препарата берберин содержит только натуральные компоненты - экстракт растения (ягод) берберина и желатин для наполнения капсулы.</p>
+                                </div>
+                                <div class="elm-vote-set">
+                                    <div class="vote-title">Ответ был полезен?</div>
+                                    <div class="vote-actions">
+                                        <div class="vote-button btn-action-ico ico-vote-up"></div>
+                                        <div class="vote-button btn-action-ico ico-vote-down"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/item wrap-->
+                        <!--item wrap-->
+                        <div class="item-wrap">
+                            <div class="item-tile-query">
+                                <div class="tile-title-wrap">
+                                    <div class="tile-title">Александр</div>
+                                    <div class="tile-info">20 сентября 2025</div>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <p>Здравствуйте. напишите пожалуйста состав БАД берберин. из чего состоит содержимое</p>
+                                </div>
+                            </div>
+                            <div class="item-tile-answer">
+                                <div class="tile-title-wrap">
+                                    <div class="tile-title">Ответ Longa Vida</div>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <p>Добрый день. Состав препарата берберин содержит только натуральные компоненты - экстракт растения (ягод) берберина и желатин для наполнения капсулы.</p>
+                                </div>
+                                <div class="elm-vote-set">
+                                    <div class="vote-title">Ответ был полезен?</div>
+                                    <div class="vote-actions">
+                                        <div class="vote-button btn-action-ico ico-vote-up"></div>
+                                        <div class="vote-button btn-action-ico ico-vote-down"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/item wrap-->
+                        <!--item wrap-->
+                        <div class="item-wrap">
+                            <div class="item-tile-query">
+                                <div class="tile-title-wrap">
+                                    <div class="tile-title">Александр</div>
+                                    <div class="tile-info">20 сентября 2025</div>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <p>Здравствуйте. напишите пожалуйста состав БАД берберин. из чего состоит содержимое</p>
+                                </div>
+                            </div>
+                            <div class="item-tile-answer">
+                                <div class="tile-title-wrap">
+                                    <div class="tile-title">Ответ Longa Vida</div>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <p>Добрый день. Состав препарата берберин содержит только натуральные компоненты - экстракт растения (ягод) берберина и желатин для наполнения капсулы.</p>
+                                </div>
+                                <div class="elm-vote-set">
+                                    <div class="vote-title">Ответ был полезен?</div>
+                                    <div class="vote-actions">
+                                        <div class="vote-button btn-action-ico ico-vote-up"></div>
+                                        <div class="vote-button btn-action-ico ico-vote-down"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/item wrap-->
+                        <!--item wrap-->
+                        <div class="item-wrap">
+                            <div class="item-tile-query">
+                                <div class="tile-title-wrap">
+                                    <div class="tile-title">Александр</div>
+                                    <div class="tile-info">20 сентября 2025</div>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <p>Здравствуйте. напишите пожалуйста состав БАД берберин. из чего состоит содержимое</p>
+                                </div>
+                            </div>
+                            <div class="item-tile-answer">
+                                <div class="tile-title-wrap">
+                                    <div class="tile-title">Ответ Longa Vida</div>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <p>Добрый день. Состав препарата берберин содержит только натуральные компоненты - экстракт растения (ягод) берберина и желатин для наполнения капсулы.</p>
+                                </div>
+                                <div class="elm-vote-set">
+                                    <div class="vote-title">Ответ был полезен?</div>
+                                    <div class="vote-actions">
+                                        <div class="vote-button btn-action-ico ico-vote-up"></div>
+                                        <div class="vote-button btn-action-ico ico-vote-down"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/item wrap-->
+                        <!--item wrap-->
+                        <div class="item-wrap">
+                            <div class="item-tile-query">
+                                <div class="tile-title-wrap">
+                                    <div class="tile-title">Александр</div>
+                                    <div class="tile-info">20 сентября 2025</div>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <p>Здравствуйте. напишите пожалуйста состав БАД берберин. из чего состоит содержимое</p>
+                                </div>
+                            </div>
+                            <div class="item-tile-answer">
+                                <div class="tile-title-wrap">
+                                    <div class="tile-title">Ответ Longa Vida</div>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <p>Добрый день. Состав препарата берберин содержит только натуральные компоненты - экстракт растения (ягод) берберина и желатин для наполнения капсулы.</p>
+                                </div>
+                                <div class="elm-vote-set">
+                                    <div class="vote-title">Ответ был полезен?</div>
+                                    <div class="vote-actions">
+                                        <div class="vote-button btn-action-ico ico-vote-up"></div>
+                                        <div class="vote-button btn-action-ico ico-vote-down"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/item wrap-->
+                        <!--item wrap-->
+                        <div class="item-wrap">
+                            <div class="item-tile-query">
+                                <div class="tile-title-wrap">
+                                    <div class="tile-title">Александр</div>
+                                    <div class="tile-info">20 сентября 2025</div>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <p>Здравствуйте. напишите пожалуйста состав БАД берберин. из чего состоит содержимое</p>
+                                </div>
+                            </div>
+                            <div class="item-tile-answer">
+                                <div class="tile-title-wrap">
+                                    <div class="tile-title">Ответ Longa Vida</div>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <p>Добрый день. Состав препарата берберин содержит только натуральные компоненты - экстракт растения (ягод) берберина и желатин для наполнения капсулы.</p>
+                                </div>
+                                <div class="elm-vote-set">
+                                    <div class="vote-title">Ответ был полезен?</div>
+                                    <div class="vote-actions">
+                                        <div class="vote-button btn-action-ico ico-vote-up"></div>
+                                        <div class="vote-button btn-action-ico ico-vote-down"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/item wrap-->
+                        <!--item wrap-->
+                        <div class="item-wrap">
+                            <div class="item-tile-query">
+                                <div class="tile-title-wrap">
+                                    <div class="tile-title">Александр</div>
+                                    <div class="tile-info">20 сентября 2025</div>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <p>Здравствуйте. напишите пожалуйста состав БАД берберин. из чего состоит содержимое</p>
+                                </div>
+                            </div>
+                            <div class="item-tile-answer">
+                                <div class="tile-title-wrap">
+                                    <div class="tile-title">Ответ Longa Vida</div>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <p>Добрый день. Состав препарата берберин содержит только натуральные компоненты - экстракт растения (ягод) берберина и желатин для наполнения капсулы.</p>
+                                </div>
+                                <div class="elm-vote-set">
+                                    <div class="vote-title">Ответ был полезен?</div>
+                                    <div class="vote-actions">
+                                        <div class="vote-button btn-action-ico ico-vote-up"></div>
+                                        <div class="vote-button btn-action-ico ico-vote-down"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/item wrap-->
+                    </div>
+                    <div class="back-inner-wrap">
+                        <a href="" class="btn button-light">
+                            <div class="button-ico">
+                                <img src="./img/icons/arrow-slider.svg" alt="">
+                            </div>
+                            <div class="button-title">Вернуться</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="info-inner-wrap elm-hidden-mobile">
+                    <!--action-box-->
+                    <div class="action-box">
+                        <div class="item-tile-action-box">
+                            <div class="tile-photo-wrap elm-decor">
+                                <div class="elm-photo photo-cover">
+                                    <img src="./img/action01.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="tile-info-wrap">
+                                <div class="tile-title">Бесплатная консультация</div>
+                                <p>Сомневаетесь в покупке? Проконсультируйтесь со специалистом. Это бесплатно.</p>
+                            </div>
+                            <div class="tile-actions-wrap">
+                                <a href="" class="btn button-white">
+                                    <div class="button-title">Записаться</div>
+                                </a>
+                                <a href="" class="btn button-link button-arrow">
+                                    <div class="button-title">О консультации</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/action-box-->
+                </div>
+            </div>
+            <!--/tiles-list-box-->
+
+
         </div>
         <!-- /page -->
 
