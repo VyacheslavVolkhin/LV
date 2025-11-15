@@ -72,6 +72,34 @@ li {
         }
     }
 }
+ol {
+	counter-reset: li; 
+	list-style: none;
+	li {
+		position: relative;
+		padding-left: 24px;
+		&:before {
+			content: counter(li) '.'; 
+			counter-increment: li; 
+			border-radius: 0;
+			background-color: transparent;
+			display: block;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 24px;
+			text-align: right;
+			padding: 0 6px 0 0;
+			height: auto;
+			color: var(--clr-att-hover);
+		}
+		&:nth-child(9)~li:before {
+			content: counter(li) '.';
+		}
+	}
+}
 a {
     text-decoration: none;
     color: var(--clr-base);
@@ -83,6 +111,33 @@ a {
 a.link-main, .link-main {
     text-decoration: none;
     border-bottom: 1px solid;
+}
+a.link-out, .link-out {
+    text-decoration: none;
+	display: inline-block;
+	padding: 0 28px 0 0;
+	position: relative;
+	color: var(--clr-base);
+	transition: all ease 0.2s;
+	&:hover {
+		color: var(--clr-att);
+		&:before {
+			filter: none;
+		}
+	}
+	&:before {
+		content: "";
+		display: block;
+		width: 24px;
+		height: 24px;
+		position: absolute;
+		background: url(../img/icons/link-out.svg) center no-repeat;
+		background-size: 100% auto;
+		top: 50%;right: 10px;
+		margin: -12px -12px 0 0;
+		filter: var(--filterBlack);
+		transition: all ease 0.2s;
+	}
 }
 .link-phone, .link-email, .link-location {
     white-space: nowrap;
@@ -168,7 +223,7 @@ h6, .h6-title {
 		margin-top: -1px;
 	}
 }
-.title-decor {
+.title-decor, .title-decor-m, .title-decor-d {
 	display: inline-block;
 	position: relative;
 	&.decor-yellow {
@@ -191,11 +246,16 @@ h6, .h6-title {
 		background-position: center;
 	}
 }
+.title-decor-d {
+	&:before {
+		display: none;
+	}
+}
 /* 24-36 (30 title-small-d) (20 title-small-m) (20-30 title-small) */
 .page-title {
 	font-size: 24px;
 }
-/* 26-50 (30 title-large-m)(22 title-small-m) */
+/* 26-50 (30 title-large-m)(22 title-small-m) (40 title-small-d) */
 .h1-title, h1 {
 	font-size: 26px;
 }
@@ -211,6 +271,12 @@ h6, .h6-title {
 }
 .text-att, .title-att {
 	color: var(--clr-att);
+}
+.text-alert, .title-alert {
+	color: var(--clr-alert);
+}
+.text-succefull, .title-succefull {
+	color: var(--clr-succefull);
 }
 .text-line, .title-line {
 	white-space: nowrap;
@@ -282,11 +348,24 @@ h6, .h6-title {
 	.h1-title, h1 {
 		font-size: 5rem;
 		line-height: (54/50);
+		&.title-small-d {
+			font-size: 4rem;
+		}
 	}
 	.h2-title, h2 {
 		font-size: 3rem;
 		&.title-small-d {
 			font-size: 24px;
+		}
+	}
+	.title-decor-m {
+		&:before {
+			display: none;
+		}
+	}
+	.title-decor-d {
+		&:before {
+			display: block;
 		}
 	}
 }

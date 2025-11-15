@@ -5,6 +5,7 @@
 		}
 	],
 	"settings": {
-		"window.title": "${rootName}"
+		"window.title": "${rootName}",
+		"editor.formatOnPaste": true
 	}
 }

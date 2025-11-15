@@ -13,6 +13,15 @@ document.addEventListener("DOMContentLoaded", function() {
 		},
 	});
 
+	//tooltip
+	tippy('.js-tooltip', {
+			content(reference) {
+			const dataTitle = reference.getAttribute('data-title');
+			return dataTitle.replace(/\n/g, '<br>');
+		},
+		allowHTML: true
+	});
+
 
 	//reviews stat toggle
 	const toggleBtns = document.querySelectorAll('.js-popup-review-toggle');
@@ -47,25 +56,27 @@ if (toggleBtns.length && popup) {
 
 	//sticky panel get active
 	const stickyPanel = document.getElementById('stickyPanel');
-	function updateStickyState() {
-	const rect = stickyPanel.getBoundingClientRect();
-	if (rect.top === 0) {
-		stickyPanel.classList.add('active');
-	} else {
-		stickyPanel.classList.remove('active');
-	}
-	}
-	let ticking = false;
-	window.addEventListener('scroll', () => {
-	if (!ticking) {
-		requestAnimationFrame(() => {
-		updateStickyState();
-		ticking = false;
+	if (stickyPanel) {
+		function updateStickyState() {
+		const rect = stickyPanel.getBoundingClientRect();
+		if (rect.top === 0) {
+			stickyPanel.classList.add('active');
+		} else {
+			stickyPanel.classList.remove('active');
+		}
+		}
+		let ticking = false;
+		window.addEventListener('scroll', () => {
+		if (!ticking) {
+			requestAnimationFrame(() => {
+			updateStickyState();
+			ticking = false;
+			});
+			ticking = true;
+		}
 		});
-		ticking = true;
+		window.addEventListener('resize', updateStickyState);
 	}
-	});
-	window.addEventListener('resize', updateStickyState);
 
 
 	//mobile tabs active 
@@ -226,9 +237,21 @@ if (toggleBtns.length && popup) {
 
 
 	//btn tgl and add
+	let tglButtonsMobile = document.querySelectorAll('.js-btn-mobile-tgl')
 	let tglButtons = document.querySelectorAll('.js-btn-tgl')
 	let addButtons = document.querySelectorAll('.js-btn-add')
 	let buttonsTglOne = document.querySelectorAll('.js-btn-tgl-one');
+	if (tglButtonsMobile) {
+		if (window.innerWidth < 1024) {
+			for (i = 0; i < tglButtonsMobile.length; i++) {
+				tglButtonsMobile[i].addEventListener('click', function(e) {
+					this.classList.toggle('open');
+					e.preventDefault();
+					return false;
+				});
+			}
+		}
+	}
 	if (tglButtons) {
 		for (i = 0; i < tglButtons.length; i++) {
 			tglButtons[i].addEventListener('click', function(e) {
@@ -740,6 +763,33 @@ if (toggleBtns.length && popup) {
 			},
 			thumbs: {
 				swiper: swiperPhotosPreview,
+			},
+		});
+	});
+
+
+	//slider blog
+	const slidersblog = document.querySelectorAll(".slider-blog");
+	
+	slidersblog.forEach((container) => {
+		const swiperEl = container.querySelector(".swiper");
+		const nextEl = container.querySelector(".button-slider-blog-next");
+		const prevEl = container.querySelector(".button-slider-blog-prev");
+	
+		if (!swiperEl) return;
+	
+		new Swiper(swiperEl, {
+			loop: false,
+			slidesPerGroup: 1,
+			slidesPerView: 1,
+			spaceBetween: 0,
+			autoHeight: false,
+			speed: 400,
+			pagination: false,
+			autoplay: false,
+			navigation: {
+				nextEl: nextEl,
+				prevEl: prevEl,
 			},
 		});
 	});
