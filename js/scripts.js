@@ -99,8 +99,6 @@ if (toggleBtns.length && popup) {
 			function update() {
 				const current = textarea.value.length;
 				counter.textContent = `${current} / ${maxLength}`;
-				
-				// Динамическое изменение стилей
 				const percent = (current / maxLength) * 100;
 				if (percent >= warningThreshold) {
 					counter.classList.add('warning');
@@ -287,6 +285,18 @@ if (toggleBtns.length && popup) {
 						.forEach(button => button.classList.add('active'));
 				} else {
 					this.classList.add('active');
+				}
+				
+				// Новый функционал
+				if (this.classList.contains('tile-button-cart') || 
+					this.closest('.cart-wrap')) {
+					const popupCart = document.querySelector('#popup-cart-added');
+					if (popupCart) {
+						popupCart.classList.add('active');
+						setTimeout(() => {
+							popupCart.classList.remove('active');
+						}, 2000);
+					}
 				}
 				
 				e.preventDefault();

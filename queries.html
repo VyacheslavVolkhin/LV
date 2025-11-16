@@ -20,6 +20,7 @@
     <script src="./js/menumore.js" defer></script>
     <script src="./js/select.js" defer></script>
     <script src="./js/counter.js" defer></script>
+    <script src="./js/multifiles.js" defer></script>
     <script src="./js/scripts.js" defer></script>
     <style>
         .tile-many-lines,
@@ -1641,7 +1642,7 @@
         </footer>
         <!-- /footer -->
         <!--popup-outer-box-->
-        <div class="popup-outer-box popup-mobile" id="popup-query">
+        <div class="popup-outer-box" id="popup-query">
             <div class="popup-box">
                 <a href="" class="btn button-light btn-popup-close btn-action-ico ico-close js-popup-close"></a>
                 <div class="popup-title-wrap">
@@ -1670,11 +1671,476 @@
             </div>
         </div><!--/popup-outer-box-->
 
+        <!--popup-outer-box-->
+        <div class="popup-outer-box popup-main" id="popup-form">
+            <div class="popup-box">
+                <a href="" class="btn button-light btn-popup-close btn-action-ico ico-close js-popup-close"></a>
+                <div class="popup-title-wrap">
+                    <div class="popup-title">Пожалуйста, <br>заполните форму</div>
+                </div>
+                <div class="popup-content-wrap">
+                    <form action="/" class="frm-popup">
+                        <div class="frm-row">
+                            <div class="frm-field">
+                                <div class="field-title">Пол</div>
+                                <div class="frm-field-input">
+                                    <input type="text" class="form-input inp-gray" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frm-row">
+                            <div class="frm-field">
+                                <div class="field-title">Полных лет</div>
+                                <div class="frm-field-input">
+                                    <input type="text" class="form-input inp-gray" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frm-row">
+                            <div class="frm-field">
+                                <div class="field-title">Главная жалоба</div>
+                                <div class="frm-field-input">
+                                    <input type="text" class="form-input inp-gray" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frm-row">
+                            <div class="frm-field">
+                                <div class="field-title">Дополнительная жалоба</div>
+                                <div class="frm-field-input">
+                                    <input type="text" class="form-input inp-gray" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frm-row">
+                            <div class="frm-field">
+                                <div class="field-title">Пожелание</div>
+                                <div class="frm-field-input">
+                                    <input type="text" class="form-input inp-gray" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frm-row-submit">
+                            <div class="frm-field field-submit">
+                                <button type="submit" class="btn">
+                                    <div class="button-title">Отправить</div>
+                                </button>
+                            </div>
+                            <div class="frm-field field-info">Al hacer clic en" Suscribirse", usted acepta el procesamiento de datos personales. Más información en la política de privacidad</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div><!--/popup-outer-box-->
+
+        <!--popup-outer-box-->
+        <div class="popup-outer-box popup-main" id="popup-review">
+            <div class="popup-box">
+                <a href="" class="btn button-light btn-popup-close btn-action-ico ico-close js-popup-close"></a>
+                <div class="popup-title-wrap">
+                    <div class="popup-title">Пожалуйста, <br>оставьте отзыв</div>
+                </div>
+                <div class="popup-content-wrap">
+                    <div class="popup-product-box">
+                        <div class="photo-inner-wrap">
+                            <div class="elm-photo photo-contain">
+                                <img src="./img/catalog01.png" alt="">
+                            </div>
+                        </div>
+                        <div class="info-inner-wrap">
+                            <div class="product-title"><a href="">Berberine, улучшенный комплекс, Nature’s Craft</a></div>
+                            <div class="product-info">90 капсул</div>
+                        </div>
+                    </div>
+                    <form action="/" class="frm-popup form-review">
+                        <div class="frm-row">
+                            <div class="frm-field">
+                                <div class="field-title">Поставьте оценку</div>
+                                <div class="frm-rate-set">
+                                    <input type="radio" name="rate-set" id="rate-set01">
+                                    <input type="radio" name="rate-set" id="rate-set02">
+                                    <input type="radio" name="rate-set" id="rate-set03" checked>
+                                    <input type="radio" name="rate-set" id="rate-set04">
+                                    <input type="radio" name="rate-set" id="rate-set05">
+                                    <label for="rate-set01" class="frm-rate"></label>
+                                    <label for="rate-set02" class="frm-rate"></label>
+                                    <label for="rate-set03" class="frm-rate"></label>
+                                    <label for="rate-set04" class="frm-rate"></label>
+                                    <label for="rate-set05" class="frm-rate"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frm-row">
+                            <div class="frm-field">
+                                <div class="field-title">Расскажите о ваших впечатлениях</div>
+                                <div class="frm-field-textarea">
+                                    <textarea class="form-input" placeholder="" maxlength="1000" data-counter-warning="90"></textarea>
+                                    <div class="field-textarea-counter" data-title="Введено символов"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frm-row">
+                            <div class="frm-field">
+                                <div class="field-title">Добавить видео</div>
+                                <div class="files-upload-box">
+                                    <div class="frm-field-upload js-field-file-multiple upload-photos">
+                                        <input type="file" class="js-field-input" multiple="" accept="video/*, .mp4, .avi, .mov, .mkv, .webm" max="2">
+                                        <div class="upload-info-wrap">
+                                            <div class="elm-ico">
+                                                <img src="./img/icons/video.svg" alt="">
+                                            </div>
+                                            <div class="file-info-wrap">
+                                                <div class="upload-title">Нажмите, чтобы загрузить</div>
+                                                <div class="upload-info">или перетащите в это поле</div>
+                                            </div>
+                                            <a href="" class="button-upload js-file-button-attach"></a>
+                                        </div>
+                                    </div>
+                                    <div class="upload-desk-wrap">Вы можете загрузить до 2 видео</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frm-row">
+                            <div class="frm-field">
+                                <div class="field-title">Добавить фото</div>
+                                <div class="files-upload-box">
+                                    <div class="frm-field-upload js-field-file-multiple upload-photos">
+                                        <input type="file" class="js-field-input" multiple="" accept="image/*" max="2">
+                                        <div class="upload-info-wrap">
+                                            <div class="elm-ico">
+                                                <img src="./img/icons/photo.svg" alt="">
+                                            </div>
+                                            <div class="file-info-wrap">
+                                                <div class="upload-title">Нажмите, чтобы загрузить</div>
+                                                <div class="upload-info">или перетащите в это поле</div>
+                                            </div>
+                                            <a href="" class="button-upload js-file-button-attach"></a>
+                                        </div>
+                                    </div>
+                                    <div class="upload-desk-wrap">Вы можете загрузить до 2 фото</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frm-row-submit">
+                            <div class="frm-field field-submit">
+                                <button type="submit" class="btn">
+                                    <div class="button-title">Отправить отзыв</div>
+                                </button>
+                            </div>
+                            <div class="frm-field field-info">Al hacer clic en" Suscribirse", usted acepta el procesamiento de datos personales. Más información en la política de privacidad</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div><!--/popup-outer-box-->
+
+
+        <!--popup-outer-box-->
+        <div class="popup-outer-box popup-center" id="popup-message">
+            <div class="popup-box">
+                <a href="" class="btn button-light btn-popup-close btn-action-ico ico-close js-popup-close"></a>
+                <div class="popup-title-wrap text-center">
+                    <div class="popup-title">Важное сообщение</div>
+                </div>
+                <div class="popup-content-wrap">
+                    <div class="popup-message-box">
+                        <div class="info-inner-wrap">
+                            <p>Бесплатная консультация доступна только зарегистрированным пользователям. Пожалуйста, зарегистрируйтесь на сайте или
+                                войдите в свой профиль.</p>
+                        </div>
+                        <div class="actions-inner-wrap">
+                            <div class="action-wrap">
+                                <a href="" class="btn">
+                                    <div class="button-title">Войти</div>
+                                </a>
+                            </div>
+                            <div class="action-wrap">
+                                <a href="" class="btn">
+                                    <div class="button-title">Зарегистрироваться</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/popup-outer-box-->
+
+        <!--popup-outer-box-->
+        <div class="popup-outer-box popup-main" id="popup-info">
+            <div class="popup-box">
+                <a href="" class="btn button-light btn-popup-close btn-action-ico ico-close js-popup-close"></a>
+                <div class="popup-title-wrap text-center-d">
+                    <div class="popup-title">About cookies on this site</div>
+                </div>
+                <div class="popup-content-wrap">
+                    <form action="/" class="popup-article-box">
+                        <div class="popup-scroll-wrap">
+                            <div class="popup-section-wrap">
+                                <p>Some cookies are necessary for our Services to work properly. Others help us improve your experience or provide
+                                    insights
+                                    into how you use our site. It is your choice if you want to allow these cookies to be set, by changing the
+                                    settings
+                                    for
+                                    each category below. Not allowing certain cookies to be set might interfere with your use of website.</p>
+                                <p>Наша <a href="" class="link-main">политика куки</a>.</p>
+                                <div class="actions-inner-wrap">
+                                    <div class="action-wrap">
+                                        <a href="" class="btn">
+                                            <div class="button-title">Принять все</div>
+                                        </a>
+                                    </div>
+                                    <div class="action-wrap">
+                                        <a href="" class="btn">
+                                            <div class="button-title">Отклонить все</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="popup-section-wrap">
+                                <div class="frm-select-toggle type-right">
+                                    <input type="checkbox" id="popupinfotoggle01" checked>
+                                    <label for="popupinfotoggle01">Необходимые файлы cookie</label>
+                                </div>
+                                <p>These cookies are necessary for the Services to function properly and cannot be disabled. They are usually only
+                                    set in
+                                    response to actions made by you, enabling functions like navigation, login, or setting preferences. These
+                                    cookies do not
+                                    store information about you that will be used for other purposes.</p>
+                            </div>
+                            <div class="popup-section-wrap">
+                                <div class="frm-select-toggle type-right">
+                                    <input type="checkbox" id="popupinfotoggle02">
+                                    <label for="popupinfotoggle02">Функциональные файлы cookie</label>
+                                </div>
+                                <p>The cookies enable the Services to provide enhanced functionality and personalization. If you do not allow
+                                    functional
+                                    cookies, this could adversely affect your experience when using website.</p>
+                            </div>
+                            <div class="popup-section-wrap">
+                                <div class="frm-select-toggle type-right">
+                                    <input type="checkbox" id="popupinfotoggle03">
+                                    <label for="popupinfotoggle03">Функциональные файлы cookie</label>
+                                </div>
+                                <p>The cookies enable the Services to provide enhanced functionality and personalization. If you do not allow
+                                    functional
+                                    cookies, this could adversely affect your experience when using website.</p>
+                            </div>
+                        </div>
+                        <div class="popup-section-wrap section-main">
+                            <div class="actions-inner-wrap">
+                                <div class="action-wrap">
+                                    <button type="submit" class="btn">
+                                        <span class="button-title">Сохранить настройки</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div><!--/popup-outer-box-->
+
+        <!--popup-outer-box-->
+        <div class="popup-outer-box popup-auth" id="popup-login">
+            <div class="popup-box">
+                <a href="" class="btn-popup-close btn-action-ico ico-close js-popup-close"></a>
+                <div class="popup-content-wrap">
+                    <form action="/" class="popup-auth-box">
+                        <div class="frm-title-wrap">
+                            <div class="frm-photo-wrap elm-decor">
+                                <div class="elm-photo photo-cover">
+                                    <img src="./img/add.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="frm-info-wrap">
+                                <div class="frm-title">Bienvenido!</div>
+                                <p>Еще не с нами? <br><a href="" class="link-main js-popup-open" data-popup="popup-reg">Зарегистрируйтесь!</a></p>
+                            </div>
+                        </div>
+                        <div class="frm-content-wrap">
+                            <div class="frm-title">Вход</div>
+                            <div class="frm-popup">
+                                <div class="frm-row">
+                                    <div class="frm-field">
+                                        <div class="field-title">Войдите с помощью соцсетей</div>
+                                        <div class="frm-field-soc">
+                                            <a href="" class="btn button-light">
+                                                <div class="button-ico">
+                                                    <img src="./img/icons/soc05.svg" alt="">
+                                                </div>
+                                            </a>
+                                            <a href="" class="btn button-light">
+                                                <div class="button-ico">
+                                                    <img src="./img/icons/soc01.svg" alt="">
+                                                </div>
+                                            </a>
+                                            <a href="" class="btn button-light">
+                                                <div class="button-ico">
+                                                    <img src="./img/icons/soc03.svg" alt="">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="field-title">или</div>
+                                    </div>
+                                </div>
+                                <div class="frm-row">
+                                    <div class="frm-field">
+                                        <div class="field-title">E-mail</div>
+                                        <div class="frm-field-input">
+                                            <input type="email" class="form-input inp-gray">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="frm-row">
+                                    <div class="frm-field">
+                                        <div class="field-title">Пароль</div>
+                                        <div class="frm-field-input">
+                                            <input type="password" class="form-input inp-gray">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="frm-row-submit">
+                                    <div class="frm-field field-submit">
+                                        <button type="submit" class="btn">
+                                            <div class="button-title">Войти</div>
+                                        </button>
+                                    </div>
+                                    <div class="frm-field field-link"><a href="" class="link-main">Забыли пароль?</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div><!--/popup-outer-box-->
+
+        <!--popup-outer-box-->
+        <div class="popup-outer-box popup-auth" id="popup-reg">
+            <div class="popup-box">
+                <a href="" class="btn-popup-close btn-action-ico ico-close js-popup-close"></a>
+                <div class="popup-content-wrap">
+                    <form action="/" class="popup-auth-box">
+                        <div class="frm-title-wrap">
+                            <div class="frm-photo-wrap elm-decor">
+                                <div class="elm-photo photo-cover">
+                                    <img src="./img/add.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="frm-info-wrap">
+                                <div class="frm-title">Bienvenido!</div>
+                                <p>Уже с нами? <br><a href="" class="link-main js-popup-open" data-popup="popup-login">Войти</a></p>
+                            </div>
+                        </div>
+                        <div class="frm-content-wrap">
+                            <div class="frm-title">Регистрация</div>
+                            <div class="frm-popup">
+                                <div class="frm-row">
+                                    <div class="frm-field">
+                                        <div class="field-title">Регистрируйтесь с помощью соцсетей</div>
+                                        <div class="frm-field-soc">
+                                            <a href="" class="btn button-light">
+                                                <div class="button-ico">
+                                                    <img src="./img/icons/soc05.svg" alt="">
+                                                </div>
+                                            </a>
+                                            <a href="" class="btn button-light">
+                                                <div class="button-ico">
+                                                    <img src="./img/icons/soc01.svg" alt="">
+                                                </div>
+                                            </a>
+                                            <a href="" class="btn button-light">
+                                                <div class="button-ico">
+                                                    <img src="./img/icons/soc03.svg" alt="">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="field-title">или</div>
+                                    </div>
+                                </div>
+                                <div class="frm-row">
+                                    <div class="frm-field">
+                                        <div class="field-title">E-mail</div>
+                                        <div class="frm-field-input">
+                                            <input type="email" class="form-input inp-gray">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="frm-row">
+                                    <div class="frm-field">
+                                        <div class="field-title">Пароль</div>
+                                        <div class="frm-field-input">
+                                            <input type="password" class="form-input inp-gray">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="frm-row">
+                                    <div class="frm-field">
+                                        <div class="field-title">Повторите пароль</div>
+                                        <div class="frm-field-input">
+                                            <input type="password" class="form-input inp-gray">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="frm-row-submit">
+                                    <div class="frm-field field-submit">
+                                        <button type="submit" class="btn">
+                                            <div class="button-title">Создать аккаунт</div>
+                                        </button>
+                                    </div>
+                                    <div class="frm-field field-info">
+                                        <p>Al hacer clic en" Suscribirse", usted acepta el procesamiento de datos personales.
+                                            Más información en la política de privacidad</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div><!--/popup-outer-box-->
+
+        <!--popup-outer-box-->
+        <div class="popup-outer-box popup-cookie" id="cookie_notification">
+            <div class="popup-box">
+                <div class="popup-content-wrap">
+                    <div class="popup-cookie-box">
+                        <div class="info-inner-wrap">
+                            <p>Мы используем файлы cookie, чтобы улучшить ваш опыт работы. Узнайте больше в нашей <a href="" class="link-main">Политике конфиденциальности</a>.</p>
+                        </div>
+                        <div class="actions-inner-wrap">
+                            <div class="action-wrap">
+                                <div class="btn cookie_accept">
+                                    <div class="button-title">Aceptar cookies</div>
+                                </div>
+                            </div>
+                            <div class="action-wrap">
+                                <a href="" class="btn button-white js-popup-open" data-popup="popup-info">
+                                    <div class="button-title">Configurar cookies</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/popup-outer-box-->
+
+        <!--popup-outer-box-->
+        <div class="popup-outer-box popup-cart-added" id="popup-cart-added">
+            <div class="popup-box">
+                <div class="popup-title-wrap">
+                    <div class="popup-title">Товар добавлен в корзину</div>
+                    <a href="" class="btn-popup-close btn-action-ico ico-close js-popup-close"></a>
+                </div>
+            </div>
+        </div>
+
+
     </div>
     <!-- /wrap -->
 
     <!--popup-outer-box-->
-    <div class="popup-outer-box popup-mobile" id="popup-query">
+    <div class="popup-outer-box" id="popup-query">
         <div class="popup-box">
             <a href="" class="btn button-light btn-popup-close btn-action-ico ico-close js-popup-close"></a>
             <div class="popup-title-wrap">
@@ -1702,6 +2168,471 @@
             </div>
         </div>
     </div><!--/popup-outer-box-->
+
+    <!--popup-outer-box-->
+    <div class="popup-outer-box popup-main" id="popup-form">
+        <div class="popup-box">
+            <a href="" class="btn button-light btn-popup-close btn-action-ico ico-close js-popup-close"></a>
+            <div class="popup-title-wrap">
+                <div class="popup-title">Пожалуйста, <br>заполните форму</div>
+            </div>
+            <div class="popup-content-wrap">
+                <form action="/" class="frm-popup">
+                    <div class="frm-row">
+                        <div class="frm-field">
+                            <div class="field-title">Пол</div>
+                            <div class="frm-field-input">
+                                <input type="text" class="form-input inp-gray" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="frm-row">
+                        <div class="frm-field">
+                            <div class="field-title">Полных лет</div>
+                            <div class="frm-field-input">
+                                <input type="text" class="form-input inp-gray" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="frm-row">
+                        <div class="frm-field">
+                            <div class="field-title">Главная жалоба</div>
+                            <div class="frm-field-input">
+                                <input type="text" class="form-input inp-gray" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="frm-row">
+                        <div class="frm-field">
+                            <div class="field-title">Дополнительная жалоба</div>
+                            <div class="frm-field-input">
+                                <input type="text" class="form-input inp-gray" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="frm-row">
+                        <div class="frm-field">
+                            <div class="field-title">Пожелание</div>
+                            <div class="frm-field-input">
+                                <input type="text" class="form-input inp-gray" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="frm-row-submit">
+                        <div class="frm-field field-submit">
+                            <button type="submit" class="btn">
+                                <div class="button-title">Отправить</div>
+                            </button>
+                        </div>
+                        <div class="frm-field field-info">Al hacer clic en" Suscribirse", usted acepta el procesamiento de datos personales. Más información en la política de privacidad</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div><!--/popup-outer-box-->
+
+    <!--popup-outer-box-->
+    <div class="popup-outer-box popup-main" id="popup-review">
+        <div class="popup-box">
+            <a href="" class="btn button-light btn-popup-close btn-action-ico ico-close js-popup-close"></a>
+            <div class="popup-title-wrap">
+                <div class="popup-title">Пожалуйста, <br>оставьте отзыв</div>
+            </div>
+            <div class="popup-content-wrap">
+                <div class="popup-product-box">
+                    <div class="photo-inner-wrap">
+                        <div class="elm-photo photo-contain">
+                            <img src="./img/catalog01.png" alt="">
+                        </div>
+                    </div>
+                    <div class="info-inner-wrap">
+                        <div class="product-title"><a href="">Berberine, улучшенный комплекс, Nature’s Craft</a></div>
+                        <div class="product-info">90 капсул</div>
+                    </div>
+                </div>
+                <form action="/" class="frm-popup form-review">
+                    <div class="frm-row">
+                        <div class="frm-field">
+                            <div class="field-title">Поставьте оценку</div>
+                            <div class="frm-rate-set">
+                                <input type="radio" name="rate-set" id="rate-set01">
+                                <input type="radio" name="rate-set" id="rate-set02">
+                                <input type="radio" name="rate-set" id="rate-set03" checked>
+                                <input type="radio" name="rate-set" id="rate-set04">
+                                <input type="radio" name="rate-set" id="rate-set05">
+                                <label for="rate-set01" class="frm-rate"></label>
+                                <label for="rate-set02" class="frm-rate"></label>
+                                <label for="rate-set03" class="frm-rate"></label>
+                                <label for="rate-set04" class="frm-rate"></label>
+                                <label for="rate-set05" class="frm-rate"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="frm-row">
+                        <div class="frm-field">
+                            <div class="field-title">Расскажите о ваших впечатлениях</div>
+                            <div class="frm-field-textarea">
+                                <textarea class="form-input" placeholder="" maxlength="1000" data-counter-warning="90"></textarea>
+                                <div class="field-textarea-counter" data-title="Введено символов"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="frm-row">
+                        <div class="frm-field">
+                            <div class="field-title">Добавить видео</div>
+                            <div class="files-upload-box">
+                                <div class="frm-field-upload js-field-file-multiple upload-photos">
+                                    <input type="file" class="js-field-input" multiple="" accept="video/*, .mp4, .avi, .mov, .mkv, .webm" max="2">
+                                    <div class="upload-info-wrap">
+                                        <div class="elm-ico">
+                                            <img src="./img/icons/video.svg" alt="">
+                                        </div>
+                                        <div class="file-info-wrap">
+                                            <div class="upload-title">Нажмите, чтобы загрузить</div>
+                                            <div class="upload-info">или перетащите в это поле</div>
+                                        </div>
+                                        <a href="" class="button-upload js-file-button-attach"></a>
+                                    </div>
+                                </div>
+                                <div class="upload-desk-wrap">Вы можете загрузить до 2 видео</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="frm-row">
+                        <div class="frm-field">
+                            <div class="field-title">Добавить фото</div>
+                            <div class="files-upload-box">
+                                <div class="frm-field-upload js-field-file-multiple upload-photos">
+                                    <input type="file" class="js-field-input" multiple="" accept="image/*" max="2">
+                                    <div class="upload-info-wrap">
+                                        <div class="elm-ico">
+                                            <img src="./img/icons/photo.svg" alt="">
+                                        </div>
+                                        <div class="file-info-wrap">
+                                            <div class="upload-title">Нажмите, чтобы загрузить</div>
+                                            <div class="upload-info">или перетащите в это поле</div>
+                                        </div>
+                                        <a href="" class="button-upload js-file-button-attach"></a>
+                                    </div>
+                                </div>
+                                <div class="upload-desk-wrap">Вы можете загрузить до 2 фото</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="frm-row-submit">
+                        <div class="frm-field field-submit">
+                            <button type="submit" class="btn">
+                                <div class="button-title">Отправить отзыв</div>
+                            </button>
+                        </div>
+                        <div class="frm-field field-info">Al hacer clic en" Suscribirse", usted acepta el procesamiento de datos personales. Más información en la política de privacidad</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div><!--/popup-outer-box-->
+
+
+    <!--popup-outer-box-->
+    <div class="popup-outer-box popup-center" id="popup-message">
+        <div class="popup-box">
+            <a href="" class="btn button-light btn-popup-close btn-action-ico ico-close js-popup-close"></a>
+            <div class="popup-title-wrap text-center">
+                <div class="popup-title">Важное сообщение</div>
+            </div>
+            <div class="popup-content-wrap">
+                <div class="popup-message-box">
+                    <div class="info-inner-wrap">
+                        <p>Бесплатная консультация доступна только зарегистрированным пользователям. Пожалуйста, зарегистрируйтесь на сайте или
+                            войдите в свой профиль.</p>
+                    </div>
+                    <div class="actions-inner-wrap">
+                        <div class="action-wrap">
+                            <a href="" class="btn">
+                                <div class="button-title">Войти</div>
+                            </a>
+                        </div>
+                        <div class="action-wrap">
+                            <a href="" class="btn">
+                                <div class="button-title">Зарегистрироваться</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/popup-outer-box-->
+
+    <!--popup-outer-box-->
+    <div class="popup-outer-box popup-main" id="popup-info">
+        <div class="popup-box">
+            <a href="" class="btn button-light btn-popup-close btn-action-ico ico-close js-popup-close"></a>
+            <div class="popup-title-wrap text-center-d">
+                <div class="popup-title">About cookies on this site</div>
+            </div>
+            <div class="popup-content-wrap">
+                <form action="/" class="popup-article-box">
+                    <div class="popup-scroll-wrap">
+                        <div class="popup-section-wrap">
+                            <p>Some cookies are necessary for our Services to work properly. Others help us improve your experience or provide
+                                insights
+                                into how you use our site. It is your choice if you want to allow these cookies to be set, by changing the
+                                settings
+                                for
+                                each category below. Not allowing certain cookies to be set might interfere with your use of website.</p>
+                            <p>Наша <a href="" class="link-main">политика куки</a>.</p>
+                            <div class="actions-inner-wrap">
+                                <div class="action-wrap">
+                                    <a href="" class="btn">
+                                        <div class="button-title">Принять все</div>
+                                    </a>
+                                </div>
+                                <div class="action-wrap">
+                                    <a href="" class="btn">
+                                        <div class="button-title">Отклонить все</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup-section-wrap">
+                            <div class="frm-select-toggle type-right">
+                                <input type="checkbox" id="popupinfotoggle01" checked>
+                                <label for="popupinfotoggle01">Необходимые файлы cookie</label>
+                            </div>
+                            <p>These cookies are necessary for the Services to function properly and cannot be disabled. They are usually only
+                                set in
+                                response to actions made by you, enabling functions like navigation, login, or setting preferences. These
+                                cookies do not
+                                store information about you that will be used for other purposes.</p>
+                        </div>
+                        <div class="popup-section-wrap">
+                            <div class="frm-select-toggle type-right">
+                                <input type="checkbox" id="popupinfotoggle02">
+                                <label for="popupinfotoggle02">Функциональные файлы cookie</label>
+                            </div>
+                            <p>The cookies enable the Services to provide enhanced functionality and personalization. If you do not allow
+                                functional
+                                cookies, this could adversely affect your experience when using website.</p>
+                        </div>
+                        <div class="popup-section-wrap">
+                            <div class="frm-select-toggle type-right">
+                                <input type="checkbox" id="popupinfotoggle03">
+                                <label for="popupinfotoggle03">Функциональные файлы cookie</label>
+                            </div>
+                            <p>The cookies enable the Services to provide enhanced functionality and personalization. If you do not allow
+                                functional
+                                cookies, this could adversely affect your experience when using website.</p>
+                        </div>
+                    </div>
+                    <div class="popup-section-wrap section-main">
+                        <div class="actions-inner-wrap">
+                            <div class="action-wrap">
+                                <button type="submit" class="btn">
+                                    <span class="button-title">Сохранить настройки</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div><!--/popup-outer-box-->
+
+    <!--popup-outer-box-->
+    <div class="popup-outer-box popup-auth" id="popup-login">
+        <div class="popup-box">
+            <a href="" class="btn-popup-close btn-action-ico ico-close js-popup-close"></a>
+            <div class="popup-content-wrap">
+                <form action="/" class="popup-auth-box">
+                    <div class="frm-title-wrap">
+                        <div class="frm-photo-wrap elm-decor">
+                            <div class="elm-photo photo-cover">
+                                <img src="./img/add.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="frm-info-wrap">
+                            <div class="frm-title">Bienvenido!</div>
+                            <p>Еще не с нами? <br><a href="" class="link-main js-popup-open" data-popup="popup-reg">Зарегистрируйтесь!</a></p>
+                        </div>
+                    </div>
+                    <div class="frm-content-wrap">
+                        <div class="frm-title">Вход</div>
+                        <div class="frm-popup">
+                            <div class="frm-row">
+                                <div class="frm-field">
+                                    <div class="field-title">Войдите с помощью соцсетей</div>
+                                    <div class="frm-field-soc">
+                                        <a href="" class="btn button-light">
+                                            <div class="button-ico">
+                                                <img src="./img/icons/soc05.svg" alt="">
+                                            </div>
+                                        </a>
+                                        <a href="" class="btn button-light">
+                                            <div class="button-ico">
+                                                <img src="./img/icons/soc01.svg" alt="">
+                                            </div>
+                                        </a>
+                                        <a href="" class="btn button-light">
+                                            <div class="button-ico">
+                                                <img src="./img/icons/soc03.svg" alt="">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="field-title">или</div>
+                                </div>
+                            </div>
+                            <div class="frm-row">
+                                <div class="frm-field">
+                                    <div class="field-title">E-mail</div>
+                                    <div class="frm-field-input">
+                                        <input type="email" class="form-input inp-gray">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="frm-row">
+                                <div class="frm-field">
+                                    <div class="field-title">Пароль</div>
+                                    <div class="frm-field-input">
+                                        <input type="password" class="form-input inp-gray">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="frm-row-submit">
+                                <div class="frm-field field-submit">
+                                    <button type="submit" class="btn">
+                                        <div class="button-title">Войти</div>
+                                    </button>
+                                </div>
+                                <div class="frm-field field-link"><a href="" class="link-main">Забыли пароль?</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div><!--/popup-outer-box-->
+
+    <!--popup-outer-box-->
+    <div class="popup-outer-box popup-auth" id="popup-reg">
+        <div class="popup-box">
+            <a href="" class="btn-popup-close btn-action-ico ico-close js-popup-close"></a>
+            <div class="popup-content-wrap">
+                <form action="/" class="popup-auth-box">
+                    <div class="frm-title-wrap">
+                        <div class="frm-photo-wrap elm-decor">
+                            <div class="elm-photo photo-cover">
+                                <img src="./img/add.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="frm-info-wrap">
+                            <div class="frm-title">Bienvenido!</div>
+                            <p>Уже с нами? <br><a href="" class="link-main js-popup-open" data-popup="popup-login">Войти</a></p>
+                        </div>
+                    </div>
+                    <div class="frm-content-wrap">
+                        <div class="frm-title">Регистрация</div>
+                        <div class="frm-popup">
+                            <div class="frm-row">
+                                <div class="frm-field">
+                                    <div class="field-title">Регистрируйтесь с помощью соцсетей</div>
+                                    <div class="frm-field-soc">
+                                        <a href="" class="btn button-light">
+                                            <div class="button-ico">
+                                                <img src="./img/icons/soc05.svg" alt="">
+                                            </div>
+                                        </a>
+                                        <a href="" class="btn button-light">
+                                            <div class="button-ico">
+                                                <img src="./img/icons/soc01.svg" alt="">
+                                            </div>
+                                        </a>
+                                        <a href="" class="btn button-light">
+                                            <div class="button-ico">
+                                                <img src="./img/icons/soc03.svg" alt="">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="field-title">или</div>
+                                </div>
+                            </div>
+                            <div class="frm-row">
+                                <div class="frm-field">
+                                    <div class="field-title">E-mail</div>
+                                    <div class="frm-field-input">
+                                        <input type="email" class="form-input inp-gray">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="frm-row">
+                                <div class="frm-field">
+                                    <div class="field-title">Пароль</div>
+                                    <div class="frm-field-input">
+                                        <input type="password" class="form-input inp-gray">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="frm-row">
+                                <div class="frm-field">
+                                    <div class="field-title">Повторите пароль</div>
+                                    <div class="frm-field-input">
+                                        <input type="password" class="form-input inp-gray">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="frm-row-submit">
+                                <div class="frm-field field-submit">
+                                    <button type="submit" class="btn">
+                                        <div class="button-title">Создать аккаунт</div>
+                                    </button>
+                                </div>
+                                <div class="frm-field field-info">
+                                    <p>Al hacer clic en" Suscribirse", usted acepta el procesamiento de datos personales.
+                                        Más información en la política de privacidad</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div><!--/popup-outer-box-->
+
+    <!--popup-outer-box-->
+    <div class="popup-outer-box popup-cookie" id="cookie_notification">
+        <div class="popup-box">
+            <div class="popup-content-wrap">
+                <div class="popup-cookie-box">
+                    <div class="info-inner-wrap">
+                        <p>Мы используем файлы cookie, чтобы улучшить ваш опыт работы. Узнайте больше в нашей <a href="" class="link-main">Политике конфиденциальности</a>.</p>
+                    </div>
+                    <div class="actions-inner-wrap">
+                        <div class="action-wrap">
+                            <div class="btn cookie_accept">
+                                <div class="button-title">Aceptar cookies</div>
+                            </div>
+                        </div>
+                        <div class="action-wrap">
+                            <a href="" class="btn button-white js-popup-open" data-popup="popup-info">
+                                <div class="button-title">Configurar cookies</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/popup-outer-box-->
+
+    <!--popup-outer-box-->
+    <div class="popup-outer-box popup-cart-added" id="popup-cart-added">
+        <div class="popup-box">
+            <div class="popup-title-wrap">
+                <div class="popup-title">Товар добавлен в корзину</div>
+                <a href="" class="btn-popup-close btn-action-ico ico-close js-popup-close"></a>
+            </div>
+        </div>
+    </div>
+
 
 </body>
 
