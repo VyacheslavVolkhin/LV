@@ -430,6 +430,9 @@ h2 {
 /* ----------------------------------- *\
 			structura
 \* ----------------------------------- */
+html {
+  scroll-behavior: smooth;
+}
 html,
 body {
   margin: 0;
